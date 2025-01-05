@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>🌟 RAG System: Ask & Analyze 🌟</h1>
+            <p>Enter your role and question to retrieve insights powered by advanced LLMs.</p>
+        </header>
+
+        <div class="form-container">
+            <form id="query-form">
+                <div class="form-group">
+                    <label for="role">Select Your Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="Financial Analyst">Financial Analyst</option>
+                        <option value="Researcher">Researcher</option>
+                        <option value="Technical Expert">Technical Expert</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Enter Your Question:</label>
+                    <textarea id="question" name="question" rows="3" placeholder="e.g., What are the geopolitical risks for Apple in 2023?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Query</button>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <div class="progress-section">
+                <h2>🚀 Progress</h2>
+                <p id="progress-text">Awaiting query...</p>
+            </div>
+            <div class="results-section">
+                <h2>💡 Answer</h2>
+                <div id="results-container">
+                    <p><strong>Question:</strong> <span id="user-question">N/A</span></p>
+                    <div id="answer-box">N/A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Ignore sensitive files
+.env
+/Users/atharvachouthai/Desktop/Rag/app/web_app.py
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Streamlit cache files
+.streamlit/

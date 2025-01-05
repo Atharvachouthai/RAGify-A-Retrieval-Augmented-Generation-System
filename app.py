@@ -64,7 +64,7 @@ query = st.text_input("Enter your question", placeholder="e.g., What are the geo
 if st.button("Submit Query"):
     try:
         # Dynamically locate the vectorstore directory
-        vectorstore_dir = os.path.join(os.path.dirname(__file__), "vectorstore")
+        vectorstore_dir = os.path.join(os.path.dirname(__file__),"Rag", "vectorstore")
         embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
         vectorstore = FAISS.load_local(vectorstore_dir, embedding_model, allow_dangerous_deserialization=True)
 
